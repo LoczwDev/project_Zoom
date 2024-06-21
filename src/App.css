@@ -1,0 +1,96 @@
+.owl-nav {
+  position: absolute;
+  top: 42%;
+  display: flex;
+  width: 100%;
+  max-width: 76rem;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between;
+}
+.owl-nav button {
+  cursor: pointer !important;
+  color: black !important;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 10px !important;
+  border-radius: 100% !important;
+  /* font-size: 50px !important; */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  /* box-shadow: 0 4px 8px 0 rgb(48 56 70 / 25%) !important; */
+  background-color: #fff !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.owl-nav button span {
+  font-size: 50px !important;
+  display: block !important;
+  margin-bottom: 10px !important;
+}
+.owl-nav button:hover {
+  background-color: red !important;
+  color: white !important;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  -webkit-mask: conic-gradient(from 15deg, #0000, #000);
+  animation: l26 1s infinite steps(12);
+}
+.loader,
+.loader:before,
+.loader:after {
+  background: radial-gradient(closest-side at 50% 12.5%, #f03355 96%, #0000) 50%
+      0/20% 80% repeat-y,
+    radial-gradient(closest-side at 12.5% 50%, #f03355 96%, #0000) 0 50%/80% 20%
+      repeat-x;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  transform: rotate(30deg);
+}
+.loader:after {
+  transform: rotate(60deg);
+}
+
+@keyframes l26 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
